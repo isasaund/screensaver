@@ -1,0 +1,48 @@
+html,
+body {
+    height: 100%;
+    /* Peppa bubble wand cursor (128px max for browser support); hotspot ≈ hoop center */
+    cursor: url("assets/peppa-bubble-wand-128.png") 106 26, auto;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: 'Helvetica', sans-serif;
+    overflow: hidden;
+}
+
+#bubble-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    z-index: 0;
+}
+
+#hint {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    user-select: none;
+    font-family: "Snell Roundhand", "Brush Script MT", "Apple Chancery", "Comic Sans MS", cursive;
+    font-size: clamp(42px, 6vw, 90px);
+    letter-spacing: 0.5px;
+    text-transform: lowercase;
+    color: rgba(255, 170, 215, 0.82);
+    text-shadow:
+        0 0 18px rgba(255, 170, 215, 0.25),
+        0 0 40px rgba(120, 255, 205, 0.10);
+    mix-blend-mode: screen;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
