@@ -1,8 +1,12 @@
+/* Force wand cursor everywhere (cursor does NOT inherit; canvas covers viewport) */
+:root,
 html,
-body {
+body,
+#bubble-canvas,
+#hint {
     height: 100%;
     /* Peppa bubble wand cursor (128px max for browser support); hotspot ≈ hoop center */
-    cursor: url("assets/peppa-bubble-wand-128.png") 106 26, auto;
+    cursor: url("assets/peppa-bubble-wand-128.png") 106 26, auto !important;
 }
 
 body {
